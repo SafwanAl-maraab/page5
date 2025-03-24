@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title></title>
+<style type="text/css">
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow: hidden;
+    Scroll:none;
+}
+#butto{
+
+width:150px;
+height:150px;
+margin-left:100px;
+margin-top:10px;
+padding:0px;
+background:blue;
+border:0px solid blue
+}
+#butto:hover
+{
+background:green;
+border: 0px solid red;
+}
+
+#butto:active
+{
+background:red;
+border: 0px solid green;
+}
+#butt{
+
+width:100px;
+height:100px;
+margin-left:100px;
+margin-top:10px;
+padding:0px;
+background:purple;
+border:0px solid blue;
+
+color:white;
+}
+#div{
+
+width:200px;
+height:200px;
+margin-left:10px;
+margin-top:10px;
+padding:0px;
+background:white;
+border:0px solid blue;
+overflow:hidden;
+color:white;
+}
+#but{
+
+width:50px;
+height:30px;
+margin-left:0px;
+margin-top:0px;
+padding:0px;
+background:purple;
+border:0px solid blue;
+
+color:white;
+}
+#img{
+
+width:200px;
+height:170px;
+margin-left:0px;
+margin-top:0px;
+padding:0px;
+background:purple;
+border:0px solid blue;
+
+color:white;
+}
+
+#bbu{
+
+width:50px;
+height:30px;
+margin-left:100px;
+margin-top:10px;
+padding:0px;
+background:green;
+border:0px solid blue;
+
+color:white;
+}
+</style>
+</head>
+<body>
+<video id="mm" width="0"height="0" controls style="display:none">
+        <source src="main.mp3" type="video/mp4">
+    </video>
+<button id="butto"><a href="indisk.htm" ><img src="left.png"></a></button>
+<button id="bbu" onclick="location.replace('safwan.html')">about</button><br>
+<p id="hh" style="display:none">0</p>
+<button id="butt" onclick="info()" >تعليمات</button>
+<div id="div">
+<button id="but" onclick="hedd()">اغلاق</button>
+<br>
+<img id="img" src="info.png">
+
+</div>
+
+
+<script type="text/javascript">
+var divv=document.getElementById("div");
+var mmb=document.getElementById("mm");
+var hh=document.getElementById("hh");
+divv.style.display="none"
+/*
+var musics=["main.mp3","win.mp3"];
+mmb.src=musics[0]
+mmb.play();*/
+var ddd=0;
+function updateCounter() {
+
+
+ ddd++;
+var music=["main.mp3","win.mp3","unwin.mp3"];
+if(ddd===1){
+mmb.src=music[0];
+mmb.play();
+
+}
+hh.innerHTML=ddd;
+}
+setInterval(updateCounter, 1000);
+function info(){
+
+divv.style.display="block"
+}
+function hedd(){
+
+divv.style.display="none"
+}
+</script>
+</body>
+</html>
